@@ -4,7 +4,7 @@ public class Application {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    CoinThrower coin = new CoinThrower();
+    private CoinThrower coin = new CoinThrower();
 
     public static void main(String[] args) {
         new Application().run();
