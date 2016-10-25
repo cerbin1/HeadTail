@@ -6,5 +6,4 @@ class CoinThrower {
         return headTailArray[randomNumber];
     }
 
-
 }
