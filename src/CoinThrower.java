@@ -1,4 +1,4 @@
-public class CoinThrower {
+class CoinThrower {
     private String[] headTailArray = {"head", "tail"};
 
     String randomCoin() {
