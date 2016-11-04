@@ -5,6 +5,7 @@ public class Application {
     private static Scanner scanner = new Scanner(System.in);
 
     private CoinThrower coin = new CoinThrower();
+    private Player player = new Player();
 
     public static void main(String[] args) {
         new Application().run();
@@ -25,13 +26,14 @@ public class Application {
             }
 
             if (choice.equals(coin.randomCoin())) {
-                System.out.println("Win :)");
+                player.incrementPoints();
+                System.out.println("Win :) Your points: " + player.getPoints());
             } else {
-                System.out.println("Lose :(");
+                System.out.println("Lose :( Your points: " + player.getPoints());
             }
 
             if (!checkIfUserWantToPlayAnotherGame()) {
-                System.out.println("Thanks for game!");
+                System.out.println("Thanks for game! You achieved " + player.getPoints() + " points");
                 break;
             }
         }
