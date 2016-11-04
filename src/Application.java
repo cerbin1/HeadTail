@@ -5,7 +5,6 @@ public class Application {
     private static Scanner scanner = new Scanner(System.in);
 
     private CoinThrower coin = new CoinThrower();
-    private String answer;
 
     public static void main(String[] args) {
         new Application().run();
@@ -45,8 +44,7 @@ public class Application {
 
     private boolean checkIfUserWantToPlayAnotherGame() {
         System.out.println("Do you want to play more? yes/no");
-        answer = scanner.nextLine();
-        switch (answer) {
+        switch (scanner.nextLine()) {
             case "yes":
                 return true;
             case "no":
