@@ -1,5 +1,9 @@
 class Player {
-    private int points = 0;
+    private int points;
+
+    Player() {
+        points = 0;
+    }
 
     void incrementPoints() {
         points++;
