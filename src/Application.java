@@ -32,6 +32,7 @@ public class Application {
             }
 
             if(!checkIfUserWantToPlayAnotherGame()) {
+                System.out.println("Thanks for game!");
                 break;
             }
         }
