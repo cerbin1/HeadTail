@@ -31,7 +31,7 @@ public class Application {
                 System.out.println("Lose :(");
             }
 
-            if(!checkIfUserWantToPlayAnotherGame()) {
+            if (!checkIfUserWantToPlayAnotherGame()) {
                 System.out.println("Thanks for game!");
                 break;
             }
@@ -46,14 +46,15 @@ public class Application {
     private boolean checkIfUserWantToPlayAnotherGame() {
         System.out.println("Do you want to play more? yes/no");
         answer = scanner.nextLine();
-        if (answer.equals("yes")) {
-            return true;
-        } else if (answer.equals("no")) {
-            return false;
-        } else {
-            System.out.println("Type answer again");
+        switch (answer) {
+            case "yes":
+                return true;
+            case "no":
+                return false;
+            default:
+                System.out.println("Type answer again");
+                checkIfUserWantToPlayAnotherGame();
         }
-        checkIfUserWantToPlayAnotherGame();
         return false;
     }
 }
