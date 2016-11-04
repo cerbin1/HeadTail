@@ -39,7 +39,8 @@ public class Application {
     }
 
     private boolean checkIfHeadOrTail(String stringToCheck) {
-        return stringToCheck.equals("head") || stringToCheck.equals("tail");
+
+        return stringToCheck.toLowerCase().equals("head") || stringToCheck.toLowerCase().equals("tail");
     }
 
     private boolean checkIfUserWantToPlayAnotherGame() {
